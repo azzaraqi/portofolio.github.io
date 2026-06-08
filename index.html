@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Impeccable Technical SEO -->
+    <title>Dhiwa Thatsbih Azzaraqi | Fresh Graduate Software Engineer Portfolio</title>
+    <meta name="description" content="Portofolio profesional Dhiwa Thatsbih Azzaraqi. Fresh Graduate Rekayasa Perangkat Lunak Politeknik Negeri Padang, berfokus pada Web Development (Laravel), Mobile (Flutter), AI, dan SEO Engine Optimization.">
+    <meta name="keywords" content="Dhiwa Thatsbih Azzaraqi, Software Engineer, Rekayasa Perangkat Lunak, Politeknik Negeri Padang, Laravel, Flutter, AI, Text to Speech, SEO, KabaSumbar, Minangsatu, Homecareku">
+    <meta name="author" content="Dhiwa Thatsbih Azzaraqi">
+
+    <!-- Open Graph / Social Sharing Previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dhiwa Thatsbih Azzaraqi | Fresh Graduate Software Engineer">
+    <meta property="og:description" content="Mengembangkan solusi perangkat lunak terintegrasi dari perancangan ide, UI/UX, build software, hingga optimasi mesin pencari kelas atas.">
+    <meta property="og:image" content="assets/screenshots/og_cover.png">
+    <meta property="og:url" content="https://dhiwathatsbih.dev">
+
+    <!-- Tailwind CSS Play CDN (Optimized for development & interactive styles) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7c3aed', // Violet-600
+                        secondary: '#6366f1', // Indigo-500
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Style Imports -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JSON-LD Structured Data for Google SEO Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dhiwa Thatsbih Azzaraqi",
+      "jobTitle": "Software Engineer",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Politeknik Negeri Padang"
+      },
+      "knowsAbout": [
+        "Software Engineering",
+        "Web Development",
+        "Laravel",
+        "Flutter",
+        "Text-to-Speech",
+        "Deep Learning",
+        "Search Engine Optimization (SEO)"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "PT. Homecareku Indonesia"
+        },
+        {
+          "@type": "Organization",
+          "name": "KabaSumbar.net"
+        },
+        {
+          "@type": "Organization",
+          "name": "Minangsatu.com"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 bg-bloom min-h-screen flex flex-col">
+
+    <!-- 1. Sticky Navigation Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#beranda" class="text-xl font-bold tracking-tight text-slate-900 font-outfit">
+                dhiwa<span class="text-primary">thatsbih</span>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#beranda" class="nav-link text-sm font-medium text-primary font-semibold transition-colors duration-200">Beranda</a>
+                <a href="#tentang" class="nav-link text-sm font-medium text-slate-600 hover:text-primary transition-colors duration-200">Tentang Saya</a>
+                <a href="#portfolio" class="nav-link text-sm font-medium text-slate-600 hover:text-primary transition-colors duration-200">Portfolio</a>
+                <a href="#pengalaman" class="nav-link text-sm font-medium text-slate-600 hover:text-primary transition-colors duration-200">Pengalaman</a>
+                <a href="#kontak" class="nav-link text-sm font-medium text-slate-600 hover:text-primary transition-colors duration-200">Kontak</a>
+            </nav>
+
+            <!-- CTA Mobile & Menu Button -->
+            <div class="flex items-center space-x-4">
+                <a href="#kontak" class="hidden md:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-primary rounded-full hover:bg-violet-700 transition-all duration-300 shadow-md shadow-violet-500/20 hover:scale-[1.02]">
+                    Hubungi Saya
+                </a>
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 text-slate-700 hover:text-primary transition-colors focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-white/95 backdrop-blur-lg border-b border-slate-200 py-4 px-6 flex flex-col space-y-4 shadow-lg">
+            <a href="#beranda" class="nav-link text-base font-semibold text-slate-700 hover:text-primary transition-colors">Beranda</a>
+            <a href="#tentang" class="nav-link text-base font-semibold text-slate-700 hover:text-primary transition-colors">Tentang Saya</a>
+            <a href="#portfolio" class="nav-link text-base font-semibold text-slate-700 hover:text-primary transition-colors">Portfolio</a>
+            <a href="#pengalaman" class="nav-link text-base font-semibold text-slate-700 hover:text-primary transition-colors">Pengalaman</a>
+            <a href="#kontak" class="nav-link text-base font-semibold text-slate-700 hover:text-primary transition-colors">Kontak</a>
+            <a href="#kontak" class="w-full text-center inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-primary rounded-full hover:bg-violet-700 transition-all">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content wrapper -->
+    <main class="flex-grow pt-24">
+
+        <!-- 2. Hero Section -->
+        <section id="beranda" class="max-w-7xl mx-auto px-6 py-12 md:py-20 lg:py-28 flex flex-col-reverse md:flex-row items-center justify-between gap-12 scroll-fade-in">
+            <!-- Text Content -->
+            <div class="flex-1 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 bg-violet-100 text-primary text-xs font-semibold rounded-full">
+                    <span>Halo Semua 👋, Saya</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight font-outfit">
+                    Dhiwa Thatsbih <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Azzaraqi</span>
+                </h1>
+                <p class="text-lg md:text-xl font-medium text-slate-600">
+                    Fresh Graduate Software Engineer
+                </p>
+                <p class="text-slate-500 max-w-lg leading-relaxed">
+                    Mengembangkan solusi perangkat lunak terintegrasi secara profesional. Berfokus penuh pada perancangan ide kreatif, visualisasi UI/UX berkualitas tinggi, coding tangguh, dan optimasi SEO kelas atas.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#kontak" class="px-7 py-3 text-base font-semibold text-white bg-primary rounded-full hover:bg-violet-700 shadow-lg shadow-violet-500/20 hover:scale-[1.02] transition-all duration-300">
+                        Hubungi Saya
+                    </a>
+                    <a href="#portfolio" class="px-7 py-3 text-base font-semibold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 shadow-sm transition-all duration-300">
+                        Lihat Karya Proyek
+                    </a>
+                </div>
+            </div>
+            <!-- Visual Graphic Avatar -->
+            <div class="flex-1 flex justify-center relative">
+                <!-- Glowing bloom behind avatar -->
+                <div class="absolute w-72 h-72 md:w-80 md:h-80 bg-gradient-to-tr from-primary to-secondary rounded-full filter blur-[40px] opacity-20 -z-10 animate-pulse"></div>
+                <!-- Profile Container -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl shadow-violet-600/10">
+                    <img src="assets/screenshots/profile_dhiwa.png" alt="Dhiwa Thatsbih Azzaraqi - Fresh Graduate Software Engineer" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Tentang Saya (About Me) Section -->
+        <section id="tentang" class="bg-white/60 border-y border-slate-200/50 py-16 md:py-24 scroll-fade-in">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                    <span class="text-xs uppercase font-bold tracking-widest text-primary">Tentang Saya</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-outfit">Sistematis, Terarah & Berpusat Pada Solusi</h2>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Three Pillars Content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <!-- Left Copy Column -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-slate-900 font-outfit">Profil & Keahlian Rekayasa</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Sebagai alumni lulusan program <strong>D4 - Rekayasa Perangkat Lunak Politeknik Negeri Padang</strong>, saya dilatih untuk menguasai siklus pengembangan sistem secara menyeluruh—mulai dari riset arsitektur, penyusunan database, implementasi kode backend/frontend, hingga deployment ke production server.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Bagi saya, web portofolio ini bukan sekadar CV digital statis. Ini adalah representasi terstruktur dari kombinasi fungsionalitas visual terpusat (<strong>Personal CMS</strong>) dan strategi konversi audiens (<strong>Mini-CRM</strong>) untuk melahirkan kolaborasi industri tingkat tinggi.
+                        </p>
+                        
+                        <!-- Core Stacks Tags -->
+                        <div class="space-y-3 pt-2">
+                            <h4 class="text-sm font-semibold text-slate-800 uppercase tracking-wider">Pilar Spesialisasi Inti:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">Full-Stack Developer</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">Laravel (PHP)</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">Flutter (Dart)</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">Python</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">AI (XTTS Model)</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">SEO Engine Optimization</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">UI/UX Design</span>
+                                <span class="px-3 py-1 bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600 rounded-md">Database MySQL/SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Stats/Persona Column -->
+                    <div class="bg-white/80 backdrop-blur-md border border-slate-200 p-8 rounded-2xl shadow-xl shadow-slate-900/5 space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900 font-outfit">Sikap & Nilai Profesional</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Bullet 1 -->
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 shrink-0 bg-violet-100 text-primary flex items-center justify-center rounded-lg">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 font-outfit">Bukti Teknis Berintegritas</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Menyajikan diagram arsitektur asli, data pelatihan model, dan MVC sistem alih-alih screenshot kosong.</p>
+                                </div>
+                            </div>
+                            <!-- Bullet 2 -->
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 shrink-0 bg-indigo-100 text-secondary flex items-center justify-center rounded-lg">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 font-outfit">Persona Akrab & Edukatif</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Mengambil pendekatan familiar bak rekan belajar, menggabungkan tutorial teknis tajam dengan empati nyata.</p>
+                                </div>
+                            </div>
+                            <!-- Bullet 3 -->
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 shrink-0 bg-emerald-100 text-emerald-600 flex items-center justify-center rounded-lg">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 font-outfit">Kombinasi Konversi & Analitis</h4>
+                                    <p class="text-sm text-slate-500 leading-relaxed">Melacak lalu lintas pembaca secara efisien dan mengarahkan ketertarikan mereka ke form interaksi instan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Portfolio Projects Section -->
+        <section id="portfolio" class="max-w-7xl mx-auto px-6 py-16 md:py-24 scroll-fade-in">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-primary">Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-outfit">Karya Proyek Pilihan</h2>
+                <p class="text-slate-500 text-sm">Menampilkan perancangan ide, pembuatan UI/UX, hingga build software utuh.</p>
+                <div class="w-12 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Homecareku.id -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900">
+                        <img src="assets/screenshots/homecareku_1.png" alt="Screenshot Homecareku.id Laravel Web Portal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-violet-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Laravel</span>
+                        <!-- Quick Gallery Overlay -->
+                        <button class="gallery-trigger absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold text-xs gap-2 backdrop-blur-[2px]" 
+                                data-gallery="Homecareku.id" 
+                                data-images="assets/screenshots/homecareku_1.png,assets/screenshots/homecareku_2.png,assets/screenshots/homecareku_3.png,assets/screenshots/homecareku_4.png,assets/screenshots/homecareku_5.png,assets/screenshots/homecareku_6.png,assets/screenshots/homecareku_7.png,assets/screenshots/homecareku_8.png,assets/screenshots/homecareku_9.png,assets/screenshots/homecareku_10.png,assets/screenshots/homecareku_11.png,assets/screenshots/homecareku_12.png,assets/screenshots/homecareku_13.png">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            Buka Galeri (13 SS)
+                        </button>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Homecareku.id</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Portal web penyedia layanan medis & homecare profesional terintegrasi. Memiliki alur pendaftaran pasien, pencarian perawat terdekat, dan dashboard monitoring admin.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+                            <button class="gallery-trigger text-xs font-semibold text-primary hover:text-violet-700 transition-colors flex items-center gap-1"
+                                    data-gallery="Homecareku.id" 
+                                    data-images="assets/screenshots/homecareku_1.png,assets/screenshots/homecareku_2.png,assets/screenshots/homecareku_3.png,assets/screenshots/homecareku_4.png,assets/screenshots/homecareku_5.png,assets/screenshots/homecareku_6.png,assets/screenshots/homecareku_7.png,assets/screenshots/homecareku_8.png,assets/screenshots/homecareku_9.png,assets/screenshots/homecareku_10.png,assets/screenshots/homecareku_11.png,assets/screenshots/homecareku_12.png,assets/screenshots/homecareku_13.png">
+                                Galeri (13) ➔
+                            </button>
+                            <a href="https://homecareku.web.id/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-slate-100 bg-primary hover:bg-violet-700 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                                Kunjungi Situs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: UI/UX Portfolio -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900">
+                        <img src="assets/screenshots/X - 1.png" alt="UI/UX Design Figma Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Figma</span>
+                        <!-- Figma Link Overlay -->
+                        <a href="https://www.figma.com/design/grWlnAlKyAI4O8QHGwobcM/GoBelanja-Kelompok-1?node-id=0-1&t=rLo07o2kAUFnmNvZ-1" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold text-xs gap-2 backdrop-blur-[2px]">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            Buka di Figma
+                        </a>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Portofolio Desain UI/UX</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2">
+                                Prototipe interaktif modern dengan fokus riset kemudahan penggunaan (user efficiency):
+                            </p>
+                            <!-- Figma links grid -->
+                            <ul class="text-[11px] text-slate-600 space-y-2 pt-1 border-t border-slate-100">
+                                <li class="flex items-start gap-1.5">
+                                    <span class="text-primary font-bold">1.</span>
+                                    <a href="https://www.figma.com/design/grWlnAlKyAI4O8QHGwobcM/GoBelanja-Kelompok-1?node-id=0-1&t=rLo07o2kAUFnmNvZ-1" target="_blank" rel="noopener noreferrer" class="hover:text-primary hover:underline transition-colors font-medium">GoBelanja E-Commerce (Cart & Payment)</a>
+                                </li>
+                                <li class="flex items-start gap-1.5">
+                                    <span class="text-primary font-bold">2.</span>
+                                    <a href="https://www.figma.com/design/39lr4NpLCRYHoVJlrotPOa/UAS_TopikKI_Dhiwa_2111083005_DesignShoppingCart?node-id=0-1&p=f&t=yFl9L7qFpyxpeWNC-0" target="_blank" rel="noopener noreferrer" class="hover:text-primary hover:underline transition-colors font-medium">Barbershop Online Booking</a>
+                                </li>
+                                <li class="flex items-start gap-1.5">
+                                    <span class="text-primary font-bold">3.</span>
+                                    <a href="https://www.figma.com/design/psdHcSR11jgHDCDb07wLOz/Tugas-UTS-kelompok?node-id=0-1&t=avg6T5VvMpSLHUcD-1" target="_blank" rel="noopener noreferrer" class="hover:text-primary hover:underline transition-colors font-medium">Sejarah Pahlawan Minangkabau</a>
+                                </li>
+                                <li class="flex items-start gap-1.5">
+                                    <span class="text-primary font-bold">4.</span>
+                                    <a href="https://www.figma.com/design/UUQiDFrmnOI4jWt9XCxY8D/pengaduan-app?node-id=0-1&t=fZGIfEiJlv2HhEMs-1" target="_blank" rel="noopener noreferrer" class="hover:text-primary hover:underline transition-colors font-medium">Aplikasi Sistem Pengaduan</a>
+                                </li>
+                                <li class="flex items-start gap-1.5">
+                                    <span class="text-primary font-bold">5.</span>
+                                    <a href="https://www.figma.com/design/xbE9gNy6pfzjuYxsp3gt7N/UAS_Topik_Dhiwa_2111083005_Design-Shopping-Cart?node-id=5-3&t=hSg41T1W9yvhNDb9-1" target="_blank" rel="noopener noreferrer" class="hover:text-primary hover:underline transition-colors font-medium">Supermarket Shopping Cart</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+                            <a href="https://www.figma.com/design/grWlnAlKyAI4O8QHGwobcM/GoBelanja-Kelompok-1?node-id=0-1&t=rLo07o2kAUFnmNvZ-1" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-primary hover:text-violet-700 transition-colors flex items-center gap-1">
+                                Kunjungi Figma ➔
+                            </a>
+                            <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-widest">Product Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: AI Text-to-Speech -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900">
+                        <img src="assets/screenshots/tts_1.png" alt="AI Indonesian Text to Speech Deep Learning Diagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">AI / Python</span>
+                        <!-- Quick Gallery Overlay -->
+                        <button class="gallery-trigger absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold text-xs gap-2 backdrop-blur-[2px]" 
+                                data-gallery="AI Text-To-Speech" 
+                                data-images="assets/screenshots/tts_1.png,assets/screenshots/tts_2.png,assets/screenshots/tts_3.png,assets/screenshots/tts_4.png,assets/screenshots/tts_5.png,assets/screenshots/tts_6.png,assets/screenshots/tts_7.png,assets/screenshots/tts_8.png">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            Buka Galeri (8 SS)
+                        </button>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Indonesian Text-to-Speech</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Sintesis suara digital berbahasa Indonesia alami. Model pembelajaran mendalam dilatih menggunakan Coqui TTS/XTTS deep learning model hingga jutaan iterasi dengan dynamic range normalization.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <button class="gallery-trigger text-xs font-semibold text-primary hover:text-violet-700 transition-colors flex items-center gap-1"
+                                    data-gallery="AI Text-To-Speech" 
+                                    data-images="assets/screenshots/tts_1.png,assets/screenshots/tts_2.png,assets/screenshots/tts_3.png,assets/screenshots/tts_4.png,assets/screenshots/tts_5.png,assets/screenshots/tts_6.png,assets/screenshots/tts_7.png,assets/screenshots/tts_8.png">
+                                Lihat Galeri (8 SS) ➔
+                            </button>
+                            <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Apl_GS -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900">
+                        <img src="insight/view_aplgs/android_dashboard_mockup.png" alt="Apl_GS Mystery Shopper Mobile App Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-sky-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Flutter</span>
+                        <!-- Quick Gallery Overlay -->
+                        <button class="gallery-trigger absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold text-xs gap-2 backdrop-blur-[2px]" 
+                                data-gallery="Apl_GS (Ghost Shopper)" 
+                                data-images="insight/view_aplgs/android_dashboard_mockup.png,insight/view_aplgs/android_audit_mockup.png,insight/view_aplgs/android_signature_mockup.png,insight/view_aplgs/tampilan_aut_login.png,insight/view_aplgs/tampilan_pdf_services.png,insight/view_aplgs/tampilan_visit_cont.png,insight/view_aplgs/windows_app_run_1.png,insight/view_aplgs/windows_app_run_2.png">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            Buka Galeri (8 SS)
+                        </button>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Apl_GS (Ghost Shopper)</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Aplikasi mobile audit & penilaian outlet fisik untuk Mystery Shoppers. Memudahkan sinkronisasi skor audit, pengisian tanda tangan digital, kalkulasi kepatuhan, serta caching offline SQLite & export PDF.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+                            <button class="gallery-trigger text-xs font-semibold text-primary hover:text-violet-700 transition-colors flex items-center gap-1"
+                                    data-gallery="Apl_GS (Ghost Shopper)" 
+                                    data-images="insight/view_aplgs/android_dashboard_mockup.png,insight/view_aplgs/android_audit_mockup.png,insight/view_aplgs/android_signature_mockup.png,insight/view_aplgs/tampilan_aut_login.png,insight/view_aplgs/tampilan_pdf_services.png,insight/view_aplgs/tampilan_visit_cont.png,insight/view_aplgs/windows_app_run_1.png,insight/view_aplgs/windows_app_run_2.png">
+                                Galeri (8) ➔
+                            </button>
+                            <a href="#kontak" class="text-xs font-bold text-slate-100 bg-primary hover:bg-violet-700 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                                Hubungi Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Camping Ground & Tenant Booking -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900">
+                        <img src="insight/view_park_book/1_landing_page.png" alt="Camping Ground Booking Landing Page" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Full-Stack</span>
+                        <!-- Quick Gallery Overlay -->
+                        <button class="gallery-trigger absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold text-xs gap-2 backdrop-blur-[2px]" 
+                                data-gallery="Camping & Tenant Booking" 
+                                data-images="insight/view_park_book/1_landing_page.png,insight/view_park_book/2_booking_form.png,insight/view_park_book/3_client_bookings.png,insight/view_park_book/4_review_modal.png,insight/view_park_book/5_admin_login.png,insight/view_park_book/6_admin_calendar.png,insight/view_park_book/7_walkin_modal.png,insight/view_park_book/8_revenue_charts.png,insight/view_park_book/book_service.png,insight/view_park_book/calender_blade.png,insight/view_park_book/pricingService.png,insight/view_park_book/stats_service.png">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                            Buka Galeri (12 SS)
+                        </button>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Camping Ground & Tenant Booking</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Sistem reservasi sewa kavling camping & booth tenant secara real-time. Mempermudah pendaftaran online, visualisasi denah lokasi, dasbor kalender admin, modal reservasi walk-in, dan grafik pendapatan.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+                            <button class="gallery-trigger text-xs font-semibold text-primary hover:text-violet-700 transition-colors flex items-center gap-1"
+                                    data-gallery="Camping & Tenant Booking" 
+                                    data-images="insight/view_park_book/1_landing_page.png,insight/view_park_book/2_booking_form.png,insight/view_park_book/3_client_bookings.png,insight/view_park_book/4_review_modal.png,insight/view_park_book/5_admin_login.png,insight/view_park_book/6_admin_calendar.png,insight/view_park_book/7_walkin_modal.png,insight/view_park_book/8_revenue_charts.png,insight/view_park_book/book_service.png,insight/view_park_book/calender_blade.png,insight/view_park_book/pricingService.png,insight/view_park_book/stats_service.png">
+                                Galeri (12) ➔
+                            </button>
+                            <a href="#kontak" class="text-xs font-bold text-slate-100 bg-primary hover:bg-violet-700 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                                Hubungi Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Portal Berita & SEO Specialist -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow-xl shadow-violet-500/5 group flex flex-col h-full">
+                    <div class="relative aspect-video overflow-hidden border-b border-slate-200 bg-slate-900 flex items-center justify-center p-6">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/logos/logo_kabasumbar.png" alt="KabaSumbar" class="h-6 filter brightness-0 invert opacity-80 group-hover:scale-105 transition-all">
+                            <img src="assets/logos/logo_minangsatu.png" alt="Minangsatu" class="h-6 filter brightness-0 invert opacity-80 group-hover:scale-105 transition-all">
+                        </div>
+                        <span class="absolute top-3 left-3 bg-rose-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">SEO & Redaksi</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors font-outfit">Editor & SEO Specialist</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed">
+                                Pengelolaan redaksi konten berita online regional Sumatra Barat dan optimasi struktur SEO agar berita lokal tampil optimal di Google News, terverifikasi atas nama editor <strong>Dhiwa</strong>.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">News Editorial</span>
+                            <div class="flex gap-2">
+                                <a href="http://kabasumbar.net/" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-primary hover:underline">KabaSumbar</a>
+                                <span class="text-slate-300 text-[11px]">|</span>
+                                <a href="http://minangsatu.com/" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-primary hover:underline">MinangSatu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Experience & Education Section -->
+        <section id="pengalaman" class="max-w-7xl mx-auto px-6 py-16 md:py-24 scroll-fade-in">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-xs uppercase font-bold tracking-widest text-primary">Pengalaman & Pendidikan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-outfit">Riwayat Perjalanan & Karir</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Timeline Grid -->
+            <div class="max-w-4xl mx-auto relative border-l border-slate-200 pl-8 space-y-12">
+                <!-- Timeline item 1: Pendidikan -->
+                <div class="relative">
+                    <!-- Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 bg-primary border-4 border-slate-50 rounded-full shadow-md shadow-violet-500/20"></div>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-violet-100 text-primary text-xs font-semibold px-3 py-1 rounded-full">2021 - 2026</span>
+                        <h3 class="text-xl font-bold text-slate-900 font-outfit">D4 - Rekayasa Perangkat Lunak</h3>
+                        <p class="text-sm font-semibold text-slate-500">Politeknik Negeri Padang</p>
+                        <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                            Mempelajari rekayasa kode tingkat lanjut, optimalisasi sistem database terdistribusi, pembuatan framework backend, rekayasa mobile android/iOS menggunakan Flutter, serta metodologi SDLC Agile.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 2: Web Developer Homecareku -->
+                <div class="relative">
+                    <!-- Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 bg-secondary border-4 border-slate-50 rounded-full shadow-md shadow-indigo-500/20"></div>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-indigo-100 text-secondary text-xs font-semibold px-3 py-1 rounded-full">Web Developer</span>
+                        <h3 class="text-xl font-bold text-slate-900 font-outfit">Web Developer & Engineer Internship</h3>
+                        <p class="text-sm font-semibold text-slate-500">PT. Homecareku Indonesia</p>
+                        <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                            Mengonseptualisasikan ide, merancang visual purwarupa, hingga memprogram web portal terpadu <code>Homecareku.id</code> dengan menggunakan ekosistem framework Laravel guna memberikan pelayanan prima di bidang medis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 3: SEO Engineer News -->
+                <div class="relative">
+                    <!-- Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 bg-emerald-500 border-4 border-slate-50 rounded-full shadow-md shadow-emerald-500/20"></div>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-emerald-100 text-emerald-600 text-xs font-semibold px-3 py-1 rounded-full">SEO Specialist</span>
+                        <h3 class="text-xl font-bold text-slate-900 font-outfit">SEO Engine & Editorial News</h3>
+                        <p class="text-sm font-semibold text-slate-500">KabaSumbar.net & Minangsatu.com</p>
+                        <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                            Mendesain struktur arsitektur SEO on-page/off-page portal berita online, menulis artikel berita lokal, mengedit liputan, serta memastikan artikel terindeks optimal di jajaran mesin pencari nasional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline item 5: Djamil Coffeeshop -->
+                <div class="relative">
+                    <!-- Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 bg-rose-500 border-4 border-slate-50 rounded-full shadow-md shadow-rose-500/20"></div>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-rose-100 text-rose-600 text-xs font-semibold px-3 py-1 rounded-full">Media Analyst</span>
+                        <h3 class="text-xl font-bold text-slate-900 font-outfit">Social Media Analyst & Editor</h3>
+                        <p class="text-sm font-semibold text-slate-500">Djamil Coffeeshop</p>
+                        <p class="text-sm text-slate-400 max-w-2xl leading-relaxed">
+                            Menganalisis matriks keterlibatan digital (engagement rates), memformulasikan visual kampanye kreatif, serta mengedit konten video promosi komersial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Interactive Contact Section -->
+        <section id="kontak" class="bg-white/60 border-t border-slate-200/50 py-16 md:py-24 scroll-fade-in">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                    <span class="text-xs uppercase font-bold tracking-widest text-primary">Kontak</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-outfit">Hubungi Saya</h2>
+                    <p class="text-slate-500 text-sm">Terbuka untuk diskusi proyek, kolaborasi produk, dan peluang kerja.</p>
+                    <div class="w-12 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Contact layouts -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch max-w-5xl mx-auto">
+                    <!-- Contact Info card -->
+                    <div class="lg:col-span-5 bg-gradient-to-tr from-slate-900 to-slate-800 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between space-y-8 relative overflow-hidden">
+                        <!-- Bloom overlay -->
+                        <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-secondary/15 rounded-full filter blur-[30px]"></div>
+                        
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold font-outfit">Mari Terkoneksi</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Kirimkan pesan singkat melalui sarana di samping atau hubungi kontak profesional saya kapan saja. Saya akan merespons secepat mungkin.
+                            </p>
+                        </div>
+
+                        <!-- Mini Contacts items with SVGs -->
+                        <div class="space-y-4">
+                            <!-- Email link -->
+                            <a href="mailto:dhiwa17koe@gmail.com" class="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors group">
+                                <span class="w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                                </span>
+                                <span class="text-sm font-semibold">dhiwa17koe@gmail.com</span>
+                            </a>
+                            <!-- LinkedIn Link -->
+                            <a href="https://linkedin.com/in/dhiwathatsbih" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors group">
+                                <span class="w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </span>
+                                <span class="text-sm font-semibold">LinkedIn Profile</span>
+                            </a>
+                            <!-- GitHub Link -->
+                            <a href="https://github.com/dhiwathatsbih" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors group">
+                                <span class="w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg group-hover:bg-primary/20 transition-colors">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" clip-rule="evenodd"/></svg>
+                                </span>
+                                <span class="text-sm font-semibold">GitHub Account</span>
+                            </a>
+                            <!-- Location indicator -->
+                            <div class="flex items-center space-x-3 text-slate-300">
+                                <span class="w-8 h-8 bg-white/10 flex items-center justify-center rounded-lg">
+                                    <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                                </span>
+                                <span class="text-sm">Padang, Sumatra Barat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form card -->
+                    <div class="lg:col-span-7 bg-white border border-slate-200 p-8 rounded-2xl shadow-xl flex flex-col justify-between">
+                        <form id="contact-form" action="mailto:dhiwa17koe@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Nama Lengkap</label>
+                                <input type="text" id="name" name="Nama" required class="w-full bg-slate-50 border border-slate-200 px-4 py-2 text-sm rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Alamat Email</label>
+                                <input type="email" id="email" name="Email" required class="w-full bg-slate-50 border border-slate-200 px-4 py-2 text-sm rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="nama@email.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Pesan Anda</label>
+                                <textarea id="message" name="Pesan" rows="4" required class="w-full bg-slate-50 border border-slate-200 px-4 py-2 text-sm rounded-lg focus:outline-none focus:border-primary transition-colors" placeholder="Tuliskan pesan atau penawaran kerja sama di sini..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 px-5 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-violet-700 shadow-md shadow-violet-500/10 transition-colors">
+                                Kirim Pesan ➔
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. Sleek Slate Footer -->
+    <footer class="bg-slate-950 text-slate-400 border-t border-slate-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+            <!-- Col 1: Bio -->
+            <div class="md:col-span-5 space-y-4">
+                <span class="text-xl font-bold tracking-tight text-white font-outfit">dhiwa<span class="text-primary">thatsbih</span></span>
+                <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
+                    Personal branding dan portofolio profesional untuk membuktikan keahlian teknis terintegrasi serta membangun rapport digital di mata industri dunia.
+                </p>
+                <p class="text-xs text-slate-500">
+                    Email: dhiwa17koe@gmail.com <br>
+                    Lokasi: Padang, Sumatra Barat
+                </p>
+            </div>
+            <!-- Col 2: Categories -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white font-outfit">Kategori Karya</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Web Development</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Mobile Programming</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Deep Learning AI</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Search Engine Optimization</a></li>
+                </ul>
+            </div>
+            <!-- Col 3: Navigation Links -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white font-outfit">Navigasi Tautan</h4>
+                <ul class="text-xs space-y-2 grid grid-cols-2 gap-x-4">
+                    <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                    <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Saya</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                    <li><a href="#pengalaman" class="hover:text-white transition-colors">Pengalaman</a></li>
+                    <li><a href="#kontak" class="hover:text-white transition-colors">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider and Copyright Attribution -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-[11px] text-slate-600">
+                &copy; 2026 Dhiwa Thatsbih Azzaraqi. Semua hak dilindungi.
+            </p>
+            <p class="text-[11px] text-slate-600">
+                Dibuat secara kustom menggunakan <span class="text-slate-500 font-semibold">Tailwind CSS</span> &amp; <span class="text-slate-500 font-semibold">Vanilla JS</span>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[100] hidden bg-slate-950/95 backdrop-blur-md flex flex-col justify-center items-center p-4 select-none">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-all focus:outline-none cursor-pointer" aria-label="Tutup Galeri">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        
+        <!-- Lightbox Main Frame -->
+        <div class="relative max-w-5xl w-full flex items-center justify-between gap-4">
+            <!-- Prev Button -->
+            <button id="lightbox-prev" class="text-white/80 hover:text-white p-3.5 rounded-full bg-white/5 hover:bg-white/10 transition-all focus:outline-none cursor-pointer" aria-label="Gambar Sebelumnya">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            
+            <!-- Active Image -->
+            <div class="flex-grow flex flex-col items-center">
+                <div class="relative max-h-[70vh] flex items-center justify-center">
+                    <img id="lightbox-img" src="" alt="Detail Screenshots" class="max-h-[70vh] max-w-full rounded-xl object-contain shadow-2xl border border-white/10">
+                </div>
+                <p id="lightbox-caption" class="text-white font-semibold text-sm mt-4 font-outfit tracking-wide text-center"></p>
+                <div class="text-white/50 text-xs mt-1 font-mono" id="lightbox-index"></div>
+            </div>
+            
+            <!-- Next Button -->
+            <button id="lightbox-next" class="text-white/80 hover:text-white p-3.5 rounded-full bg-white/5 hover:bg-white/10 transition-all focus:outline-none cursor-pointer" aria-label="Gambar Selanjutnya">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+        
+        <!-- Thumbnail strip -->
+        <div class="flex gap-2 overflow-x-auto max-w-2xl mt-6 px-4 py-2 border-t border-white/5 justify-start md:justify-center items-center w-full" id="lightbox-thumbnails"></div>
+    </div>
+
+    <!-- Core App JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
